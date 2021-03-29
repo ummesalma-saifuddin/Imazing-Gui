@@ -53,33 +53,32 @@ class MyHomePage extends StatefulWidget {
 GlobalKey<_MyHomePageState> globalKey = GlobalKey();
 
 class _MyHomePageState extends State<MyHomePage> {
-  final ImagePicker _picker = ImagePicker();
-  PickedFile _imageFile;
+  // final ImagePicker _picker = ImagePicker();
+  // PickedFile _imageFile;
   @override
   void initState() {
     super.initState();
   }
 
-  _imgFromCamera() async {
-    final image =
-        await _picker.getImage(source: ImageSource.camera, imageQuality: 50);
-
-    setState(() {
-      _imageFile = image;
-    });
-  }
-
-  _imgFromGallery() async {
-    final image =
-        await _picker.getImage(source: ImageSource.gallery, imageQuality: 50);
-
-    setState(() {
-      _imageFile = image;
-    });
-  }
-
-  Container imzButton(
-      String itext, Color icolor, IconData iicon, void Function() CallBacki) {
+  // _imgFromCamera() async {
+  //   final image =
+  //       await _picker.getImage(source: ImageSource.camera, imageQuality: 50);
+  //
+  //   setState(() {
+  //     _imageFile = image;
+  //   });
+  // }
+  //
+  // _imgFromGallery() async {
+  //   final image =
+  //       await _picker.getImage(source: ImageSource.gallery, imageQuality: 50);
+  //
+  //   setState(() {
+  //     _imageFile = image;
+  //   });
+  // }
+  // void Function() CallBacki
+  Container imzButton(String itext, Color icolor, IconData iicon) {
     return Container(
       width: (MediaQuery.of(context).size.height -
               MediaQuery.of(context).padding.top) *
@@ -119,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
               iconSize: 50,
               icon: Icon(iicon),
               color: icolor,
-              onPressed: CallBacki,
+              // onPressed: CallBacki,
             ),
           ),
           Text(
